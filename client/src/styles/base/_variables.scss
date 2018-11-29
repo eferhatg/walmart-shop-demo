@@ -1,0 +1,116 @@
+
+$font-face: helvetica-neue, Helvetica Neue, Helvetica, Arial,sans-serif;
+
+$bp-xxs: 330px;
+$bp-xs: 500px;
+$bp-sm: 768px;
+$bp-md: 992px;
+$bp-lg: 1200px;
+
+
+$black:#101010;
+$gray: #787878;
+$semi-white: #d8d8d8;
+$whitey: #f0f0f0;
+$orange:#f27c1c;
+$dark-orange:#BB4A01;
+$white:#FFF;
+
+$primary-font-color: $black;
+$secondary-font-color: $gray;
+
+$alternate-color: $orange;
+$soft-color:$semi-white;
+
+$biggest-font-size:1.6rem;
+$bigger-font-size:1.2rem;
+$big-font-size:1rem;
+$normal-font-size:0.85rem;
+$quite-small-font-size:0.8rem;
+$small-font-size:0.7rem;
+
+
+$thin-font-weight:400;
+$normal-font-weight:500;
+$bold-font-weight:800;
+$bolder-font-weight:900;
+
+
+%primary-font-specs {
+  color: $primary-font-color;
+  font-size: $normal-font-size;
+  font-weight: $normal-font-weight;
+}
+
+%primary-big-font-specs {
+  color: $primary-font-color;
+  font-size: $big-font-size;
+  font-weight: $normal-font-weight;
+}
+
+%primary-quite-small-font-specs {
+  color: $primary-font-color;
+  font-size: $quite-small-font-size;
+  font-weight: $bold-font-weight;
+}
+
+%primary-big-bold-font-specs {
+  color: $primary-font-color;
+  font-size: $big-font-size;
+  font-weight: $bold-font-weight;
+}
+
+
+%primary-thin-font-specs {
+color: $primary-font-color;
+font-size: $normal-font-size;
+font-weight: $thin-font-weight;
+}
+
+%primary-white-font-specs {
+  color: $white;
+  font-size: $normal-font-size;
+  font-weight: $normal-font-weight;
+}
+
+%primary-white-big-bold-font-specs {
+  color: $white;
+  font-size: $big-font-size;
+  font-weight: $bold-font-weight;
+}
+
+
+%secondary-font-specs {
+  color: $secondary-font-color;
+  font-size: $normal-font-size;
+  font-weight: $normal-font-weight;
+}
+
+%secondary-small-font-specs {
+  color: $secondary-font-color;
+  font-size: $small-font-size;
+  font-weight: $thin-font-weight;
+}
+
+%secondary-quite-small-font-specs {
+  color: $secondary-font-color;
+  font-size: $quite-small-font-size;
+  font-weight: $thin-font-weight;
+}
+
+%secondary-big-font-specs {
+  color: $secondary-font-color;
+  font-size: $big-font-size;
+  font-weight: $normal-font-weight;
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,63 @@
+@import "vendor/vendor";
+@import "base/base";
+@import "components/components";
+
+
+
+
+
+$font-color-default: #101010;
+
+@mixin font-defaults($size, $weight, $color: $font-color-default) {
+  color: $color;
+  font-size: $size;
+  font-weight: $weight !important;
+  letter-spacing: -0.4px;
+}
+
+@mixin anchor-defaults($size, $weight, $color: $font-color-default) {
+  @include font-defaults($size, $weight, $color);
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@mixin fa-defaults() {
+  @extend %fa-icon;
+  @extend .fas;
+}
+
+@mixin fa-before-icon($ficon, $color: $font-color-default) {
+  @include fa-defaults();
+
+  &:before {
+    color: $color;
+    content: fa-content($ficon);
+    margin-right: 8px;
+    margin-left: 10px;
+  }
+}
+
+@mixin fa-after-icon($ficon, $color: $font-color-default) {
+  @include fa-defaults();
+
+  &:after {
+    color: $color;
+    content: fa-content($ficon);
+    margin-right: 8px;
+    margin-left: 0px;
+  }
+}
+
+@mixin disappear-below($size) {
+  @include respond-below($size) {
+    display: none;
+  }
+}
+@mixin disappear-above($size) {
+  @include respond-above($size) {
+    display: none;
+  }
+}
+

@@ -1,0 +1,16 @@
+
+.topnav {
+    margin-bottom: 30px;
+    ul {
+        text-align: right;
+    }
+
+    li {
+        display: inline;
+        margin: 0 2em 0 0;
+    }
+}
+.topnav__link {
+    @extend %secondary-small-font-specs;
+    @include hover-link();
+}

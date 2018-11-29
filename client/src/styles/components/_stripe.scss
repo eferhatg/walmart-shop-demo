@@ -1,0 +1,21 @@
+.stripe{
+
+    @extend %primary-white-font-specs;
+
+    background-color: $dark-orange;
+    padding:3px 0 3px;
+    text-align: center;
+
+    &__msg{
+        display: inline-flex;
+        align-items: center;
+    }
+
+    &__learn-more{
+        margin:0 5px 0 10px;
+        @extend %primary-white-font-specs;  
+        display: inline-flex;
+
+    }
+  
+  }

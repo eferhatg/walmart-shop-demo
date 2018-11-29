@@ -1,0 +1,61 @@
+
+.mega-banner{
+    position: relative;  
+    color: white;
+
+    &__img{
+      width: 100%;
+    }
+
+    &__text{
+      @extend %primary-white-big-bold-font-specs;
+      text-align: left;
+    
+      @include respond-above(sm){     
+        max-width: 300px;  
+        position: absolute;
+        bottom: 100px;
+        left: 16px;
+      }
+      @include respond-between(sm, lg){
+        max-width: 200px;
+      }
+      @include respond-below(sm){     
+        position: static;
+        margin: 10px 0 0 0;
+        @include font-specs($big-font-size,$normal-font-weight);
+     } 
+    }
+
+    &__button{
+      @include font-specs($big-font-size,$normal-font-weight);
+ 
+      @include respond-below(sm){   
+
+        margin: 15px 0px 15px;
+      }    
+    }
+  
+    &__button__link{  
+      @include respond-above(sm){
+        @include font-specs($big-font-size,$bold-font-weight,$white);
+        @include hover-link();
+        position: absolute;
+        bottom: 40px;
+        background-color: $orange;
+        left: 16px;
+        padding: 10px 35px 10px 35px;
+        border-radius:5px;
+      }
+      @include respond-below(sm){   
+        @include font-specs($bigger-font-size,$bolder-font-weight);
+        @include hover-link();
+        display: inline-flex;
+        position: static;
+      }
+      
+  
+      
+    }
+  
+  }

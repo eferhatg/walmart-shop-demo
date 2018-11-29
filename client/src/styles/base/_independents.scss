@@ -1,0 +1,30 @@
+.boxed {
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .full-width {
+    width: 100%;
+    margin: auto;
+  }
+  
+
+  .sm-not-appear {
+    @include respond-below(sm) {
+      display: none;
+    }
+  }
+  .lg-not-appear {
+    @include respond-below(lg) {
+      display: none;
+    }
+  }
+
+  .content{
+    margin-top: 20px;
+    padding: 0px 10px 0px 10px;
+  }
+
+  .hide{
+    display: none;
+  }

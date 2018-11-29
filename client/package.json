@@ -1,0 +1,60 @@
+{
+  "name": "walmart-commerce",
+  "version": "1.0.0",
+  "description": "An e-commerce frontend supported by walmart open api",
+  "scripts": {
+    "build": "webpack --config webpack/webpack.config.prod.js  --colors",
+    "start": "webpack-dev-server --open --config webpack/webpack.config.dev.js",
+    "test": "jest"
+  },
+  "keywords": [
+    "walmart",
+    "walmart open api"
+  ],
+  "author": "eferhatg",
+  "license": "MIT",
+  "jest": {
+    "transform": {
+      "^.+\\.(mjs|jsx|js)$": "babel-jest"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!(lodash-es)/)"
+    ],
+    "setupFiles": [
+      "./jest.setup.js"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "babel-loader": "^8.0.4",
+    "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.5.4",
+    "css-loader": "^1.0.0",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-import": "^2.14.0",
+    "file-loader": "^2.0.0",
+    "html-webpack-plugin": "^4.0.0-beta.2",
+    "isomorphic-fetch": "^2.2.1",
+    "jest": "^23.6.0",
+    "mini-css-extract-plugin": "^0.4.4",
+    "nock": "^10.0.2",
+    "node-sass": "^4.9.4",
+    "regenerator-runtime": "^0.13.1",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.21.0",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9",
+    "webpack-merge": "^4.1.4"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0"
+  }
+}

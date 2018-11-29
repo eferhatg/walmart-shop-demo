@@ -1,0 +1,17 @@
+body {
+    font-family: $font-face;
+    font-size: 65%;
+    margin: 0px;
+    letter-spacing: -0.4px;
+
+  }
+
+hr {
+    @include respond-above(sm) {
+      display: none;
+    }
+    border: 0;
+    color: $soft-color;
+    background-color: $soft-color;
+    height: 1px;
+  }

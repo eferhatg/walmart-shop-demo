@@ -1,0 +1,45 @@
+.sub-banner{
+
+    margin-top:20px;
+    display: flex;
+    flex-direction: row;
+
+    @include respond-below(sm){   
+      flex-direction: column;
+    }
+
+    @include font-specs($big-font-size, $bold-font-weight);
+    &__img{
+      flex:50%;
+      img{
+        width: 100%;
+      }
+      @include respond-below(sm){   
+        flex:100%;
+      }
+    }
+    &__text{
+      margin-left: 30px;
+      flex:50%;
+      @include respond-below(sm){   
+        margin-left: 5px;
+        flex:100%;
+      }
+      &--title {
+        @include font-specs($biggest-font-size,$bolder-font-weight);
+        margin-bottom: 10px;
+        @include respond-below(lg){   
+          margin-top: 5px;
+        }
+      }
+      &--msg {
+          @extend %secondary-big-font-specs;
+      }
+      &--link {
+          @extend %primary-big-bold-font-specs; 
+          @include hover-link();
+          display: inline-flex;
+      }
+  
+    }
+  }

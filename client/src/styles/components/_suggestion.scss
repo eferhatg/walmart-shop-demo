@@ -1,0 +1,116 @@
+.suggestion {
+    display: flex;
+    width: 100%;
+    position: relative;
+    justify-content:flex-end;
+    z-index:999;
+
+
+}
+
+.suggestion__box{
+
+    position:absolute;
+    width: 67%;
+    border: solid 1px $soft-color;
+    -webkit-box-shadow: 2px 2px 7px -1px rgba(0,0,0,0.55);
+    -moz-box-shadow: 2px 2px 7px -1px rgba(0,0,0,0.55);
+    box-shadow: 2px 2px 7px -1px rgba(0,0,0,0.55);
+
+    @include respond-below(sm) {
+        width: 91%;
+      }
+}
+
+.suggestion__box__panel{
+    min-height: 230px;
+    max-width: $bp_md;
+    width: 100%;
+    display: flex;
+
+    &--cat {
+        flex:34%;
+        background-color:$white;  
+        @include respond-below(sm) {
+            flex: 100%;
+          }
+         
+    }
+    &--prod {
+        flex:66%;
+        background-color:$whitey;   
+    }
+
+
+}
+
+.suggestion__cat-list{
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+    
+  
+    li {
+        border: solid 1px $soft-color;
+        border-width: 0 1px 0 0;
+        padding: 10px 0 10px 15px;
+        a {
+            @extend  %secondary-quite-small-font-specs;
+            @include hover-link();
+
+           
+        }  
+        &.active {
+            border: solid 1px $soft-color;
+            border-width: 0 0 1px 0;
+            background-color:$whitey; 
+        }     
+    }
+}
+
+.suggestion__cat-active-list{
+    list-style-type:none;
+    font-style: italic;
+    padding: 15px 0 0 15px;
+    li {
+        padding: 0 0 10px 15px;
+        border:0;
+        a {
+            @extend  %secondary-quite-small-font-specs;
+            @include hover-link();
+
+           
+        }  
+    }
+}
+
+
+.suggestion__top-list{
+    display: flex;
+    text-align: center;
+
+}
+
+.suggestion-top{
+    flex:33% !important;
+
+    &__img{
+        border: solid 1px $soft-color;
+    }
+    &__name{
+        padding-top: 10px;
+        @extend  %secondary-quite-small-font-specs;
+    }
+    a {
+        @extend  %secondary-quite-small-font-specs;
+        @include hover-link();
+    }
+    
+}
+
+
+.suggestion__query-text{
+    padding: 20px 0 20px 10px;
+    @extend %primary-quite-small-font-specs;
+
+}

@@ -1,0 +1,12 @@
+@mixin hover-link {
+    text-decoration: none;
+    &:hover, &:focus {
+      text-decoration: underline;
+    }
+  }
+
+@mixin font-specs($size, $weight, $color:$primary-font-color) {
+    color: $color;
+    font-size: $size;
+    font-weight: $weight !important;
+}

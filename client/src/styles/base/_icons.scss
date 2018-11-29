@@ -1,0 +1,138 @@
+.icon {
+    @extend %fa-icon;
+    @extend .fas;
+    padding-right: 5px;
+}
+
+.icon-marker {
+    &:before {
+        @extend %fa-icon;
+        @extend .fas;
+        color: $alternate-color;
+        content: fa-content($fa-var-map-marker-alt);
+    }
+}
+
+.icon-user {
+    &:before {
+        @extend %fa-icon;
+        @extend .fas;
+        color: $primary-font-color;
+        content: fa-content($fa-var-user);
+    }
+}
+
+.icon-cart {
+    &:before {
+        @extend %fa-icon;
+        @extend .fas;
+        color: $primary-font-color;
+        content: fa-content($fa-var-shopping-cart);
+    }
+}
+
+.icon-search{
+    padding: .3rem;
+    &:before {
+        @extend %fa-icon;
+        @extend .fas;
+        color: $white;
+        content: fa-content($fa-var-search);
+        margin-right: 0px;
+        margin-left: 0px;
+        font-size: 1.2rem;
+    }
+}
+
+
+.icon-close{
+    padding: .3rem;
+    &:before {
+        @extend %fa-icon;
+        @extend .fas;
+        color: $white;
+        content: fa-content($fa-var-times);
+        margin-right: 0px;
+        margin-left: 0px;
+        font-size: 1.6rem;
+    }
+}
+
+.icon-by-department{
+    &:before {
+        @extend %fa-icon;
+        @extend .fas;
+        color: $primary-font-color;
+        content: fa-content($fa-var-bars);
+    }
+}
+
+.icon-by-room{
+    &:before {
+        @extend %fa-icon;
+        @extend .fas;
+        color: $primary-font-color;
+        content: fa-content($fa-var-chair);
+    }
+}
+
+
+.icon-how-to{
+    &:before {
+        @extend %fa-icon;
+        @extend .fas;
+        color: $primary-font-color;
+        content: fa-content($fa-var-lightbulb);
+    }
+}
+
+
+.icon-services{
+    &:before {
+        @extend %fa-icon;
+        @extend .fas;
+        color: $primary-font-color;
+        content: fa-content($fa-var-wrench);
+    }
+}
+
+
+.icon-value-centre{
+    &:before {
+        @extend %fa-icon;
+        @extend .fas;
+        color: $primary-font-color;
+        content: fa-content($fa-var-tag);
+    }
+}
+
+.icon-weekly-flyer{
+    &:before {
+        @extend %fa-icon;
+        @extend .fas;
+        color: $primary-font-color;
+        content: fa-content($fa-var-newspaper);
+    }
+}
+
+.icon-arrow-white {
+    &:before {
+        @extend %fa-icon;
+        @extend .fas;
+        color: $white;
+        content: fa-content($fa-var-angle-right);
+        font-size: 1rem;
+        margin-left: 3px;
+    }
+}
+
+.icon-arrow-orange {
+    &:before {
+        @extend %fa-icon;
+        @extend .fas;
+        color: $orange;
+        content: fa-content($fa-var-angle-right);
+        font-size: 1.2rem;
+        margin-left: 3px;
+    }
+}
