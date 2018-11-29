@@ -1,7 +1,6 @@
 import nock from 'nock';
 
 
-
 import searchResponse from './__mocks__/searchResponse';
 import Search from './search';
 import { searchInitialDom, searchExpectedDom } from './__mocks__/searchPopulateSuggestionBox';
