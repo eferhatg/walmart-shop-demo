@@ -11,41 +11,49 @@ const search = new Search();
 // Fetches categories in the first place to be available to searches
 taxonomy.fetchCategories();
 
-/**
- * Main flow
- * 1- Waiting for document ready
- * 2- Listening keyup
- * 3- Delaying keyup until user stop writing
- * 4- Check if query is longer than 2 characters to hide panel
- * 5- Parallel querying walmart api and bind suggestions
- * 6-
- */
+
+/*
+* Checks if query is longer than 2 characters to trigger suggestionbox
+* Parallel querying walmart api and bind suggestions
+*/
+const triggerSuggestionBox = (query) => {
+  if (query.length < 3) {
+    document.getElementById('suggestion-box').classList.add('hide');
+    return;
+  }
+  document.getElementById('loading').classList.remove('hide');
+  Promise.all([taxonomy.populateKeywordSuggestions(searchInput.value),
+    search.populateSearchSuggestions(searchInput.value)])
+    .then(() => {
+      document.getElementById('loading').classList.add('hide');
+      document.getElementById('suggestion-box').classList.remove('hide');
+    });
+};
 
 
-// 1- Waiting for document ready
+// Waiting for document ready
 ready(() => {
-  // 2- Listening keyup
+  // Listening keyup
   searchInput.addEventListener('keyup',
-
-    // 3- Delaying keyup until user stop writing
+    // Delaying keyup until user stop writing
     delay(() => {
       document.getElementById('query-object').innerHTML = searchInput.value;
-
-      // 4- Check if query is longer than 2 characters to hide panel
-      if (searchInput.value.length < 3) {
-        document.getElementById('suggestion-box').classList.add('hide');
+      triggerSuggestionBox(searchInput.value);
+    }, 200));
+  // Hiding suggestion box on focusout
+  let beforeFocusoutValue = '';
+  searchInput.addEventListener('focusout', () => {
+    beforeFocusoutValue = searchInput.value;
+    document.getElementById('suggestion-box').classList.add('hide');
+  });
+  // triggering suggestion box on focusin
+  searchInput.addEventListener('focusin', () => {
+    if (searchInput.value.length >= 3) {
+      if (beforeFocusoutValue === searchInput.value) {
+        document.getElementById('suggestion-box').classList.remove('hide');
         return;
       }
-      // end of 4
-
-      // 5- Parallel querying walmart api and bind suggestions
-      Promise.all([taxonomy.populateKeywordSuggestions(searchInput.value),
-        search.populateSearchSuggestions(searchInput.value)])
-        .then(() => {
-          document.getElementById('suggestion-box').classList.remove('hide');
-        });
-      // end of 5
-    }, 300));
-  // end of 2 and 3
+      triggerSuggestionBox(searchInput.value);
+    }
+  });
 });
-// end of 1
