@@ -1,4 +1,4 @@
-import { delay, ready } from './domHelper';
+import { ready } from './domHelper';
 
 
 describe('ready', () => {

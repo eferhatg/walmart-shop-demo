@@ -6,6 +6,7 @@ export default class Taxonomy {
   constructor() {
     this.categories = [];
     this.categorySuggestions = [];
+    this.error = null;
   }
 
   /*
@@ -24,7 +25,7 @@ export default class Taxonomy {
       .then((categories) => {
         this.categories = categories;
       })
-      .catch(err => err);
+      .catch((err) => { this.error = err; });
   }
 
 
@@ -67,7 +68,7 @@ export default class Taxonomy {
   populateKeywordSuggestions(query) {
     if (query.length < 3) throw new Error('Search criteria is too short');
 
-
+    this.error = null;
     const categoryBox = document.getElementById('category-box');
     const fetchPromise = this.categories.length > 0
       ? Promise.resolve(this.categories)
@@ -90,6 +91,7 @@ export default class Taxonomy {
           childNode.parentNode.removeChild(childNode);
         });
         categoryBox.innerHTML += catSuggHTML;
-      });
+      })
+      .catch((err) => { this.error = err; });
   }
 }

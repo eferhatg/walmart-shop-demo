@@ -21,12 +21,17 @@ const triggerSuggestionBox = (query) => {
     document.getElementById('suggestion-box').classList.add('hide');
     return;
   }
+  document.getElementById('loading').innerHTML = '( loading... )';
   document.getElementById('loading').classList.remove('hide');
   Promise.all([taxonomy.populateKeywordSuggestions(searchInput.value),
     search.populateSearchSuggestions(searchInput.value)])
     .then(() => {
-      document.getElementById('loading').classList.add('hide');
-      document.getElementById('suggestion-box').classList.remove('hide');
+      if (taxonomy.error || search.error) {
+        document.getElementById('loading').innerHTML = ' ( loading error! ) ';
+      } else {
+        document.getElementById('loading').classList.add('hide');
+        document.getElementById('suggestion-box').classList.remove('hide');
+      }
     });
 };
 

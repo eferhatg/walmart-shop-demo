@@ -7,6 +7,7 @@ export default class Search {
     this.searchResults = [];
     this.topProducts = [];
     this.topCategories = [];
+    this.error = null;
   }
 
   /*
@@ -27,7 +28,7 @@ export default class Search {
       .then((searchResults) => {
         this.searchResults = searchResults;
       })
-      .catch(err => err);
+      .catch((err) => { this.error = err; });
   }
 
   /*
@@ -78,7 +79,7 @@ export default class Search {
   populateSearchSuggestions(query) {
     if (query.length < 3) throw new Error('Search criteria is too short');
 
-
+    this.error = null;
     return this.fetchSearchResults(query)
       .then(() => {
         this.filterTopProducts();
@@ -96,6 +97,7 @@ export default class Search {
       .then((topProps) => {
         document.getElementById('top-categories').innerHTML = topProps.cat || document.getElementById('top-categories').innerHTML;
         document.getElementById('top-products').innerHTML = topProps.prod || document.getElementById('top-products').innerHTML;
-      });
+      })
+      .catch((err) => { this.error = err; });
   }
 }
