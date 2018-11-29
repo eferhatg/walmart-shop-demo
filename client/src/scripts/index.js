@@ -38,6 +38,7 @@ ready(() => {
     // Delaying keyup until user stop writing
     delay(() => {
       document.getElementById('query-object').innerHTML = searchInput.value;
+      document.getElementById('result-object').innerHTML = searchInput.value;
       triggerSuggestionBox(searchInput.value);
     }, 200));
   // Hiding suggestion box on focusout
