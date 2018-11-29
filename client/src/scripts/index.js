@@ -21,8 +21,14 @@ const triggerSuggestionBox = (query) => {
     document.getElementById('suggestion-box').classList.add('hide');
     return;
   }
+
+  // init errors and loading state on each trigger
+  taxonomy.error = null;
+  search.error = null;
   document.getElementById('loading').innerHTML = '( loading... )';
   document.getElementById('loading').classList.remove('hide');
+
+  // Query and interact depends on error
   Promise.all([taxonomy.populateKeywordSuggestions(searchInput.value),
     search.populateSearchSuggestions(searchInput.value)])
     .then(() => {
