@@ -23,7 +23,7 @@ taxonomy.fetchCategories();
 
 
 // 1- Waiting for document ready
-ready(document, () => {
+ready(() => {
   // 2- Listening keyup
   searchInput.addEventListener('keyup',
 
