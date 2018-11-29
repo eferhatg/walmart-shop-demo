@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1543529788978" clover="3.2.0">
+  <project timestamp="1543529788978" name="All files">
+    <metrics statements="103" coveredstatements="86" conditionals="48" coveredconditionals="29" methods="40" coveredmethods="31" elements="191" coveredelements="146" complexity="0" loc="103" ncloc="103" packages="2" files="8" classes="8">
+      <package name="client">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="jest.setup.js" path="/Users/eferhatg/Projects/node-js/efg/wallmart-fe/client/jest.setup.js">
+          <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        </file>
+      </package>
+      <package name="client.src.scripts">
+        <metrics statements="103" coveredstatements="86" conditionals="48" coveredconditionals="29" methods="40" coveredmethods="31"/>
+        <file name="domHelper.js" path="/Users/eferhatg/Projects/node-js/efg/wallmart-fe/client/src/scripts/domHelper.js">
+          <metrics statements="13" coveredstatements="3" conditionals="8" coveredconditionals="1" methods="5" coveredmethods="1"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="3" count="1" type="cond" truecount="1" falsecount="1"/>
+          <line num="5" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="8" count="0" type="stmt"/>
+          <line num="9" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="21" count="1" type="stmt"/>
+          <line num="22" count="0" type="stmt"/>
+          <line num="23" count="0" type="stmt"/>
+          <line num="24" count="0" type="stmt"/>
+          <line num="26" count="0" type="stmt"/>
+          <line num="28" count="0" type="stmt"/>
+          <line num="29" count="0" type="stmt"/>
+          <line num="30" count="0" type="stmt"/>
+        </file>
+        <file name="keywordSuggestion.js" path="/Users/eferhatg/Projects/node-js/efg/wallmart-fe/client/src/scripts/keywordSuggestion.js">
+          <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+          <line num="3" count="10" type="stmt"/>
+          <line num="4" count="10" type="stmt"/>
+          <line num="8" count="7" type="stmt"/>
+          <line num="9" count="7" type="stmt"/>
+          <line num="10" count="7" type="stmt"/>
+        </file>
+        <file name="search.js" path="/Users/eferhatg/Projects/node-js/efg/wallmart-fe/client/src/scripts/search.js">
+          <metrics statements="37" coveredstatements="30" conditionals="18" coveredconditionals="10" methods="16" coveredmethods="11"/>
+          <line num="7" count="6" type="stmt"/>
+          <line num="8" count="6" type="stmt"/>
+          <line num="9" count="6" type="stmt"/>
+          <line num="19" count="3" type="stmt"/>
+          <line num="21" count="3" type="stmt"/>
+          <line num="23" count="2" type="cond" truecount="2" falsecount="0"/>
+          <line num="24" count="2" type="stmt"/>
+          <line num="26" count="1" type="stmt"/>
+          <line num="28" count="1" type="stmt"/>
+          <line num="30" count="1" type="stmt"/>
+          <line num="38" count="1" type="stmt"/>
+          <line num="39" count="1" type="cond" truecount="1" falsecount="1"/>
+          <line num="40" count="1" type="stmt"/>
+          <line num="41" count="1" type="stmt"/>
+          <line num="42" count="1" type="stmt"/>
+          <line num="43" count="3" type="stmt"/>
+          <line num="45" count="1" type="stmt"/>
+          <line num="53" count="1" type="stmt"/>
+          <line num="54" count="1" type="cond" truecount="1" falsecount="1"/>
+          <line num="55" count="1" type="stmt"/>
+          <line num="56" count="1" type="stmt"/>
+          <line num="57" count="1" type="stmt"/>
+          <line num="58" count="10" type="cond" truecount="1" falsecount="1"/>
+          <line num="59" count="10" type="stmt"/>
+          <line num="60" count="10" type="stmt"/>
+          <line num="61" count="23" type="cond" truecount="4" falsecount="0"/>
+          <line num="62" count="3" type="stmt"/>
+          <line num="66" count="1" type="stmt"/>
+          <line num="79" count="1" type="cond" truecount="1" falsecount="1"/>
+          <line num="82" count="1" type="stmt"/>
+          <line num="84" count="0" type="stmt"/>
+          <line num="85" count="0" type="stmt"/>
+          <line num="88" count="0" type="stmt"/>
+          <line num="89" count="0" type="stmt"/>
+          <line num="91" count="0" type="stmt"/>
+          <line num="97" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="98" count="0" type="cond" truecount="0" falsecount="2"/>
+        </file>
+        <file name="taxonomy.js" path="/Users/eferhatg/Projects/node-js/efg/wallmart-fe/client/src/scripts/taxonomy.js">
+          <metrics statements="32" coveredstatements="32" conditionals="22" coveredconditionals="18" methods="13" coveredmethods="13"/>
+          <line num="7" count="6" type="stmt"/>
+          <line num="8" count="6" type="stmt"/>
+          <line num="18" count="3" type="stmt"/>
+          <line num="20" count="2" type="cond" truecount="2" falsecount="0"/>
+          <line num="21" count="1" type="stmt"/>
+          <line num="23" count="1" type="stmt"/>
+          <line num="25" count="1" type="stmt"/>
+          <line num="27" count="2" type="stmt"/>
+          <line num="40" count="6" type="cond" truecount="2" falsecount="0"/>
+          <line num="41" count="5" type="cond" truecount="2" falsecount="0"/>
+          <line num="43" count="4" type="stmt"/>
+          <line num="44" count="4" type="stmt"/>
+          <line num="46" count="4" type="cond" truecount="2" falsecount="0"/>
+          <line num="47" count="608" type="stmt"/>
+          <line num="48" count="608" type="cond" truecount="2" falsecount="0"/>
+          <line num="49" count="9" type="stmt"/>
+          <line num="51" count="608" type="cond" truecount="4" falsecount="0"/>
+          <line num="52" count="71" type="stmt"/>
+          <line num="55" count="4" type="cond" truecount="1" falsecount="1"/>
+          <line num="68" count="2" type="cond" truecount="1" falsecount="1"/>
+          <line num="71" count="2" type="stmt"/>
+          <line num="72" count="2" type="cond" truecount="1" falsecount="1"/>
+          <line num="76" count="2" type="stmt"/>
+          <line num="78" count="2" type="stmt"/>
+          <line num="81" count="2" type="stmt"/>
+          <line num="82" count="6" type="stmt"/>
+          <line num="84" count="2" type="stmt"/>
+          <line num="87" count="2" type="cond" truecount="1" falsecount="1"/>
+          <line num="88" count="2" type="stmt"/>
+          <line num="89" count="2" type="stmt"/>
+          <line num="90" count="6" type="stmt"/>
+          <line num="92" count="2" type="stmt"/>
+        </file>
+        <file name="topCategory.js" path="/Users/eferhatg/Projects/node-js/efg/wallmart-fe/client/src/scripts/topCategory.js">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+          <line num="3" count="4" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+        </file>
+        <file name="topProduct.js" path="/Users/eferhatg/Projects/node-js/efg/wallmart-fe/client/src/scripts/topProduct.js">
+          <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+          <line num="3" count="4" type="stmt"/>
+          <line num="4" count="4" type="stmt"/>
+          <line num="5" count="4" type="stmt"/>
+          <line num="6" count="4" type="stmt"/>
+          <line num="10" count="1" type="stmt"/>
+        </file>
+        <file name="wallmartapi.js" path="/Users/eferhatg/Projects/node-js/efg/wallmart-fe/client/src/scripts/wallmartapi.js">
+          <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="2" type="stmt"/>
+          <line num="4" count="2" type="stmt"/>
+          <line num="5" count="2" type="stmt"/>
+          <line num="6" count="2" type="stmt"/>
+          <line num="8" count="2" type="stmt"/>
+          <line num="11" count="2" type="stmt"/>
+          <line num="12" count="2" type="stmt"/>
+          <line num="13" count="2" type="stmt"/>
+          <line num="15" count="2" type="stmt"/>
+        </file>
+      </package>
+    </metrics>
+  </project>
+</coverage>
